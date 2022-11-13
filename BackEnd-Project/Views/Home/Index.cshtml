@@ -1,0 +1,280 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<main>
+    <!-- hero slider section start -->
+    <section class="hero-slider">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="hero-slider-active slick-arrow-style slick-arrow-style_hero slick-dot-style">
+                        <!-- single slider item start -->
+                        @foreach (var slider in Model.SliderDetails)
+                        {
+                            <div class="hero-single-slide">
+
+                                <div class="hero-slider-item bg-img" data-bg="assets/img/slider/@slider.Image">
+
+                                    <div class="hero-slider-content slide-1">
+                                        <h5 class="slide-subtitle">@slider.Subtitle</h5>
+                                        <h2 class="slide-title">@slider.Header</h2>
+                                        <p class="slide-desc">@slider.Description</p>
+
+                                        <a href="shop.html" class="btn btn-hero">SHOP NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- hero slider section end -->
+    <!-- service features start -->
+    <section class="service-policy-area">
+        <div class="container">
+            <div class="row">
+                @foreach (var servic in Model.Servics)
+                {
+                    <div class="col-lg-4">
+                        <div class="service-policy-item mt-30 bg-1" style="background-color:@servic.Color">
+                            <div class="policy-icon">
+                                <img src="~/assets/img/icon/@servic.Image" alt="policy icon">
+                            </div>
+                            <div class="policy-content">
+                                <h5 class="policy-title">@servic.Title</h5>
+                                <p class="policy-desc">@servic.Description</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+            </div>
+        </div>
+    </section>
+    <!-- service features end -->
+    <!-- our product area start -->
+    <section class="our-product section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <h2 class="title">@Model.OurProducts.Title</h2>
+                        <p class="sub-title">@Model.OurProducts.Description</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="product-carousel-4 mbn-50 slick-row-15 slick-arrow-style">
+                        @foreach (var product in Model.Products)
+                        {
+                            <div class="product-item mb-50" data-id="@product.CategoryId">
+                                <input style="display:none" value="@product.Id" />
+                                <div class="product-thumb">
+                                    <a asp-controller="ProductDetail" asp-action="Index" asp-route-id="@product.Id">
+                                        <img style="height:300px" src="~/assets/img/product/@product.ProductImages.FirstOrDefault(m=>m.IsMain)?.Image" alt="">
+                                    </a>
+                                </div>
+                                <div class="product-content">
+                                    <h5 class="product-name">
+                                        <a asp-controller="ProductDetail" asp-action="Index" asp-route-id="@product.Id">@product.Name</a>
+                                    </h5>
+                                    <div class="price-box">
+                                        <span class="price-regular">$@((product.Price-((product.Price* product.Discount)/100)).ToString("##.00"))</span>
+                                        <span class="price-old"><del>$@product.Price.ToString("##.00")</del></span>
+                                    </div>
+                                    <div class="product-action-link">
+                                        <a href="#" data-toggle="tooltip" title="Wishlist"><i class="ion-android-favorite-outline"></i></a>
+                                        <a class="add-to-cart" style="cursor:pointer" data-toggle="tooltip" title="Add To Cart"><i class="ion-bag"></i></a>
+                                        <a href="#" data-toggle="modal" data-target="#quick_view">
+                                            <span data-toggle="tooltip"
+                                                  title="Quick View"><i class="ion-ios-eye-outline"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- our product area end -->
+    <!-- banner statistic area start -->
+    <div class="banner-statistics">
+        <div class="container">
+            <div class="row no-gutters mtn-30">
+                @foreach (var banner in Model.Banners)
+                {
+                    <div class="col-md-6">
+                        <div class="img-container mt-30">
+                            <a asp-controller="ProductDetail" asp-action="Index" asp-route-id="@banner.Id">
+                                <img src="~/assets/img/banner/@banner.Image" alt="banner-image">
+                            </a>
+                            <div class="banner-text">
+                                <h5 class="banner-subtitle">@banner.Name</h5>
+                                <h3 class="banner-title">@banner.Discount<br>@banner.Description</h3>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+    <!-- banner statistic area end -->
+    <!-- top seller area start -->
+    <section class="top-seller-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <h2 class="title">@Model.TopSellers.Title</h2>
+                        <p class="sub-title">@Model.TopSellers.Description</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-lg-5 col-md-5">
+                    <div class="product-banner">
+                        <a href="#">
+                            <img src="~/assets/img/banner/@Model.TopSellers.Image" alt="product banner">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-lg-7 col-md-7">
+                    <div class="top-seller-carousel slick-row-15 mtn-30">
+                        @foreach (var productSeller in Model.Products)
+                        {
+                            <div class="slide-item">
+                                <div class="pro-item-small mt-30 product-item" data-id="@productSeller.CategoryId">
+                                    <input style="display:none" value="@productSeller.Id" />
+                                    <div class="product-thumb">
+                                        <a asp-controller="ProductDetail" asp-action="Index" asp-route-id="@productSeller.Id">
+                                            <img src="~/assets/img/product/@productSeller.ProductImages.FirstOrDefault(m=>m.IsMain)?.Image" alt="">
+                                        </a>
+
+                                    </div>
+
+                                    <div class="pro-small-content">
+                                        <h6 class="product-name">
+                                            <a asp-controller="ProductDetail" asp-action="Index" asp-route-id="@productSeller.Id">@productSeller.Name</a>
+                                        </h6>
+                                        <div class="price-box">
+                                            <span class="price-regular">$@((productSeller.Price-((productSeller.Price* productSeller.Discount)/100)).ToString("##.00"))</span>
+                                            <span class="price-old"><del>$@productSeller.Price.ToString("##.00")</del></span>
+                                        </div>
+                                        <div class="ratings">
+                                            <span><i class="ion-android-star"></i></span>
+                                            <span><i class="ion-android-star"></i></span>
+                                            <span><i class="ion-android-star"></i></span>
+                                            <span><i class="ion-android-star"></i></span>
+                                            <span><i class="ion-android-star"></i></span>
+                                        </div>
+                                        <div class="product-link-2">
+                                            <a href="#" data-toggle="tooltip" title="Wishlist"><i class="ion-android-favorite-outline"></i></a>
+                                            <a style="cursor:pointer;" class="add-to-cart" data-toggle="tooltip" title="Add To Cart"><i class="ion-bag"></i></a>
+                                            <a href="#" data-toggle="modal" data-target="#quick_view">
+                                                <span data-toggle="tooltip"
+                                                      title="Quick View"><i class="ion-ios-eye-outline"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- top seller area end -->
+    <!-- latest blog area start -->
+    <section class="latest-blog-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    @foreach (var blogHeaders in Model.BlogHeaders)
+                    {
+                        <div class="section-title text-center">
+                            <h2 class="title">@blogHeaders.Description</h2>
+                            <p class="sub-title">@blogHeaders.Title</p>
+                        </div>
+                    }
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="blog-carousel-active slick-row-15">
+                        @foreach (var blog in Model.Blogs.Take(4))
+                        {
+                            <div class="blog-post-item">
+                                <div class="blog-thumb">
+                                    <a asp-controller="BlogDetail" asp-action="Index">
+                                        <img src="~/assets/img/blog/@blog.Image" alt="blog thumb">
+                                    </a>
+                                </div>
+                                <div class="blog-content">
+                                    <h5 class="blog-title">
+                                        <a asp-controller="BlogDetail" asp-action="Index">
+                                            @blog.Desc
+                                        </a>
+                                    </h5>
+                                    <ul class="blog-meta">
+                                        <li><span>By: </span>Huseyn Jafarov,</li>
+                                        <li><span>On: </span>08.11.2022</li>
+                                    </ul>
+                                    <a asp-controller="BlogDetail" asp-action="Index" class="read-more">Read More...</a>
+                                </div>
+                            </div>
+
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- latest blog area end -->
+    <!-- brand area start -->
+    <div class="brand-area section-padding">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12">
+                    <div class="brand-active-carousel">
+                        @foreach (var brendLogo in Model.BrendLogos)
+                        {
+                            <div class="brand-item">
+                                <a href="#">
+                                    <img src="~/assets/img/brand/@brendLogo.Image" alt="brand image">
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- brand area end -->
+
+    @section ajax{
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js" integrity="sha512-x+Vm8jC94ynOikewaQXMEkJIOBp7iArs3IhFWSWdRT3Pq8wFz46p+ZDFAR7kHnSFf+zUv52B3prRYnbDRdgog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    }
+</main>
+

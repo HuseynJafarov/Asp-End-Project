@@ -1,0 +1,68 @@
+﻿@model LoginVM
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="login-reg-form-wrap signup-form">
+            <div class="text-danger mb-2" asp-validation-summary="All"></div>
+            <h3 style="text-align:center">Sing In</h3>
+            <form asp-controller="Account" asp-action="Login" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="single-input-item">
+                            <label asp-for="UsernameOrEmail">UsernameOrEmail</label>
+                            <input placeholder="UsernameOrEmail" asp-for="UsernameOrEmail">
+                            <span class="text-danger" asp-validation-for="UsernameOrEmail"></span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single-input-item">
+                            <label asp-for="Password">Password</label>
+                            <input placeholder="Password" asp-for="Password">
+                            <span class="text-danger" asp-validation-for="Password"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="single-input-item">
+                            <div class="login-reg-form-meta">
+                                <div class="remember-meta">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="subnewsletter">
+                                        <label class="custom-control-label" for="subnewsletter">Show Password</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="single-input-item">
+                            <div class="login-reg-form-meta">
+                                <div class="remember-meta">
+                                    <div class="custom-control custom-checkbox">
+                                        <a style="cursor:pointer; color:black;">Forget Password</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-input-item d-flex justify-content-center">
+                    <button class="btn">Sing In</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+</div>
+
+@section Scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js" integrity="sha512-xq+Vm8jC94ynOikewaQXMEkJIOBp7iArs3IhFWSWdRT3Pq8wFz46p+ZDFAR7kHnSFf+zUv52B3prRYnbDRdgog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+}

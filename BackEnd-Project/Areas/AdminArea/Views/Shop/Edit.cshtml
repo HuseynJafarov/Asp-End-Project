@@ -1,0 +1,65 @@
+﻿@model ProductUpdateVM
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <span class="text-danger">@ViewBag.Message</span>
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-description">
+                            Product
+                        </p>
+                        <div class="my-3 images">
+                            @foreach (var item in Model.Images)
+                            {
+                                <img src="~/assets/img/product/@item.Image" style="width:150px; height:150px" alt="Alternate Text" />
+                            }
+                        </div>
+                        <form asp-controller="Shop" asp-action="Edit" enctype="multipart/form-data" class="forms-sample" method="post">
+                            <div class="form-group">
+                                <label asp-for="Name">Name</label>
+                                <input class="form-control" asp-for="Name">
+                                <span asp-validation-for="Name" class="text-danger my-1"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Description">Description</label>
+                                <input class="form-control" asp-for="Description">
+                                <span asp-validation-for="Description" class="text-danger my-1"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Price">Price</label>
+                                <input type="number" min="0" step=".01" class="form-control" asp-for="Price">
+                                <span asp-validation-for="Price" class="text-danger my-1"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Discount">Discount(10%)</label>
+                                <input type="number" min="0" step="1" class="form-control" asp-for="Discount">
+                                <span asp-validation-for="Discount" class="text-danger my-1"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="CategoryId">Categories</label>
+                                <select class="form-control" asp-for="CategoryId" asp-items="@ViewBag.categories"></select>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Photos">Photos</label>
+                                <input class="form-control" asp-for="Photos">
+                                <span asp-validation-for="Photos" class="text-danger my-1"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                            <a asp-controller="Shop" asp-action="Index" class="btn btn-light">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,87 @@
+﻿@model ContactUsVM
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+    <!-- breadcrumb area start -->
+    <div class="breadcrumb-area bg-img" data-bg="assets/img/banner/breadcrumb-banner.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumb-wrap text-center">
+                        <nav aria-label="breadcrumb">
+                            <h1 class="breadcrumb-title">Contact Us</h1>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb area end -->
+    <!-- contact wrapper area start -->
+    <div class="contact-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-message">
+                        <h2 class="contact-title">tell us your project</h2>
+                        <form id="contact-form" asp-controller="ContactUs" asp-action="Index" method="post" class="contact-form">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text" placeholder="Name *" asp-for="TellUs.Name">
+                                    <span class="text-danger my-1" asp-validation-for="TellUs.Name"></span>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text" placeholder="Phone *" asp-for="TellUs.Phone">
+                                    <span class="text-danger my-1" asp-validation-for="TellUs.Phone"></span>
+                                </div><div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text" placeholder="Email *" asp-for="TellUs.Email">
+                                    <span class="text-danger my-1" asp-validation-for="TellUs.Email"></span>
+                                </div><div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text" placeholder="Subject *" asp-for="TellUs.Subject">
+                                    <span class="text-danger my-1" asp-validation-for="TellUs.Subject"></span>
+                                </div>
+                                <div class="col-12">
+                                    <div class="contact2-textarea text-center">
+                                        <input asp-for="TellUs.Message" placeholder="Message *" type="text" class="form-control2"/>
+                                        <span class="text-danger my-1" asp-validation-for="TellUs.Message"></span>
+
+                                    </div>
+                                    <div class="contact-btn">
+                                        <button class="btn" type="submit">Send Message</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-info pt-0">
+                        <h2 class="contact-title">contact us</h2>
+                        <p>
+                            @Model.Infos.Information
+                        </p>
+                        <ul>
+                            <li><i class="fa fa-fax"></i> Address : @Model.Settings["Address"]</li>
+                            <li><i class="fa fa-envelope-o"></i> @Model.Settings["MailUs"]</li>
+                            <li><i class="fa fa-phone"></i> @Model.Settings["Phone"]</li>
+                        </ul>
+                        <div class="working-time">
+                            <h3>@Model.Infos.Day</h3>
+                            <p class="pb-0">@Model.Infos.WorkingHours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact wrapper area end -->
+</main>
+

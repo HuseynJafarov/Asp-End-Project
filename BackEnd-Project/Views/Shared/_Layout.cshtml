@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<!-- Mirrored from demo.hasthemes.com/juan-preview-v1/juan/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Mar 2021 22:36:22 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="meta description">
+    <title>Juan - Shoes Store HTML Template</title>
+    <!--=== Favicon ===-->
+    <link rel="shortcut icon" href="~/assets/img/favicon.ico" type="image/x-icon" />
+    <!--=== All Plugins CSS ===-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.7/sweetalert2.css" integrity="sha512-JzSVRb7c802/njMbV97pjo1wuJAE/6v9CvthGTDxiaZij/TFpPQmQPTcdXyUVucsvLtJBT6YwRb5LhVxX3pQHQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="~/assets/css/plugins.css" rel="stylesheet">
+    <!--=== All Vendor CSS ===-->
+    <link href="~/assets/css/vendor.css" rel="stylesheet">
+    <!--=== Main Style CSS ===-->
+    <link href="~/assets/css/style.css" rel="stylesheet">
+    <!-- Modernizer JS -->
+    <script src="~/assets/js/modernizr-2.8.3.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+
+    @await Component.InvokeAsync("Header");
+    <!-- main wrapper start -->
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+    <!-- main wrapper end -->
+    @await Component.InvokeAsync("Footer");
+    <!--=======================Javascript============================-->
+    <!--=== All Vendor Js ===-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.6.7/sweetalert2.min.js" integrity="sha512-jWnZswpC+en54H2EgAsmbQ6l+71tiRawlnmkw31sthq4EGzLKPXG3MQAGIUgWcw8jumkjPNHKHHS5odj+lHudw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/assets/js/vendor.js"></script>
+    <!--=== All Plugins Js ===-->
+    <script src="~/assets/js/plugins.js"></script>
+    <!--=== Active Js ===-->
+    <script src="~/assets/js/active.js"></script>
+    @RenderSection("Scripts", required: false)
+    @RenderSection("Ajax", required: false)
+
+
+
+</body>
+<!-- Mirrored from demo.hasthemes.com/juan-preview-v1/juan/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Mar 2021 22:36:53 GMT -->
+</html>
+
+
+
+
