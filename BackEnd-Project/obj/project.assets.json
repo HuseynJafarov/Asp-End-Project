@@ -8884,11 +8884,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Desktop\\Teacher-Github\\Backend-Project\\BackEnd-Project\\BackEnd-Project.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\CodeAcademy\\ASP.NET Core\\Backend-Project\\BackEnd-Project\\BackEnd-Project.csproj",
       "projectName": "BackEnd-Project",
-      "projectPath": "C:\\Users\\HP\\Desktop\\Teacher-Github\\Backend-Project\\BackEnd-Project\\BackEnd-Project.csproj",
+      "projectPath": "C:\\Users\\HP\\Desktop\\CodeAcademy\\ASP.NET Core\\Backend-Project\\BackEnd-Project\\BackEnd-Project.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Desktop\\Teacher-Github\\Backend-Project\\BackEnd-Project\\obj\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\CodeAcademy\\ASP.NET Core\\Backend-Project\\BackEnd-Project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
