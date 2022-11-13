@@ -32,14 +32,14 @@ namespace BackEnd_Project.Controllers
 
                 int take = int.Parse(settingDatas["HomeTakeProduct"]);
 
-                IEnumerable<Servic> servics = await _context.Servics.ToListAsync();
-                IEnumerable<Banner> banners = await _context.Banners.ToListAsync();
-                OurProduct ourProducts = await _context.OurProducts.FirstOrDefaultAsync();
-                TopSeller topSellers = await _context.TopSellers.FirstOrDefaultAsync();
-                IEnumerable<Blog> blogs = await _context.Blogs.ToListAsync();
-                IEnumerable<BlogHeader> blogHeaders = await _context.BlogHeaders.ToListAsync();
-                IEnumerable<BrendLogo> brendLogos = await _context.BrendLogos.ToListAsync();
-                IEnumerable<SliderDetail> sliderDetail = await _context.SliderDetails.ToListAsync();
+                IEnumerable<Servic> servics = await _context.Servics.Where(m => m.IsDeleted == false).ToListAsync();
+                IEnumerable<Banner> banners = await _context.Banners.Where(m => m.IsDeleted == false).ToListAsync();
+                OurProduct ourProducts = await _context.OurProducts.Where(m => m.IsDeleted == false).FirstOrDefaultAsync();
+                TopSeller topSellers = await _context.TopSellers.Where(m => m.IsDeleted == false).FirstOrDefaultAsync();
+                IEnumerable<Blog> blogs = await _context.Blogs.Where(m => m.IsDeleted == false).ToListAsync();
+                IEnumerable<BlogHeader> blogHeaders = await _context.BlogHeaders.Where(m => m.IsDeleted == false).ToListAsync();
+                IEnumerable<BrendLogo> brendLogos = await _context.BrendLogos.Where(m => m.IsDeleted == false).ToListAsync();
+                IEnumerable<SliderDetail> sliderDetail = await _context.SliderDetails.Where(m => m.IsDeleted == false).ToListAsync();
                 IEnumerable<Category> categories = await _context.Categories.Where(m => m.IsDeleted == false).ToListAsync();
                 IEnumerable<Product> products = await _context.Products
                     .Where(m => m.IsDeleted == false)

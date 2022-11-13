@@ -166,9 +166,6 @@ namespace BackEnd_Project.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("BlogId")
-                        .HasColumnType("int");
-
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -179,8 +176,6 @@ namespace BackEnd_Project.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("BlogId");
 
                     b.ToTable("BlogVideos");
                 });
@@ -740,13 +735,6 @@ namespace BackEnd_Project.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
-                });
-
-            modelBuilder.Entity("BackEnd_Project.Models.BlogPage.BlogVideo", b =>
-                {
-                    b.HasOne("BackEnd_Project.Models.Blog", null)
-                        .WithMany("Video")
-                        .HasForeignKey("BlogId");
                 });
 
             modelBuilder.Entity("BackEnd_Project.Models.BlogPage.Social", b =>

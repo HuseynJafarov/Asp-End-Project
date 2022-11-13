@@ -1,0 +1,43 @@
+﻿@model BlogVM
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container my-5">
+    <div class="card">
+        <div class="card-header">
+            Blog detail
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        Image
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Date
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="~/assets/img/blog/@Model.Blogs.FirstOrDefault(m=> !m.IsDeleted)?.Image" style="width:200px; height:200px" alt="Alternate Text" />
+                    </td>
+                    <td>
+                        @Html.Raw(Model.Blogs.FirstOrDefault(m => !m.IsDeleted).Desc)
+                    </td>
+                    <td>
+                        @Model.Date.ToString("dd.MM.yyyy")
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

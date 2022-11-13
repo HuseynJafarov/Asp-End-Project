@@ -27,7 +27,7 @@ namespace BackEnd_Project.Controllers
         {
             Dictionary<string, string> settingDatas = await _layoutService.GetDatasFromSetting();
 
-            Info infos = await _context.Infos.FirstOrDefaultAsync();
+            Info infos = await _context.Infos.Where(m=> m.IsDeleted == false).FirstOrDefaultAsync();
 
 
             ContactUsVM model = new ContactUsVM

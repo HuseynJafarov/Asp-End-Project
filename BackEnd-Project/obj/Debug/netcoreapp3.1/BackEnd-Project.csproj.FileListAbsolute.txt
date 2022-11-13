@@ -353,3 +353,20 @@ C:\Users\HP\Desktop\Teacher-Github\Backend-Project\BackEnd-Project\obj\Debug\net
 C:\Users\HP\Desktop\Teacher-Github\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Shop\Create.cshtml.g.cs
 C:\Users\HP\Desktop\Teacher-Github\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Shop\Edit.cshtml.g.cs
 C:\Users\HP\Desktop\Teacher-Github\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Shop\Details.cshtml.g.cs
+C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Dashboard\Index.cshtml.g.cs
+C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Shared\_AdminLayout.cshtml.g.cs
+C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Shared\_ValidationPartial.cshtml.g.cs
+C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Shop\Create.cshtml.g.cs
+C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Shop\Details.cshtml.g.cs
+C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Shop\Edit.cshtml.g.cs
+C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Shop\Index.cshtml.g.cs
+C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\_ViewImports.cshtml.g.cs
+C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\_ViewStart.cshtml.g.cs
+C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Blog\Index.cshtml.g.cs
+C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Blog\Details.cshtml.g.cs
+C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Blog\Edit.cshtml.g.cs
+C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Blog\Create.cshtml.g.cs
+C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\BlogDetail\Index.cshtml.g.cs
+C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\BlogDetail\Create.cshtml.g.cs
+C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\BlogDetail\Edit.cshtml.g.cs
+C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\BlogDetail\Details.cshtml.g.cs

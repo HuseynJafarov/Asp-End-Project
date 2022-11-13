@@ -70,7 +70,7 @@
                             <ul class="recent-posts-inner">
                                 @foreach (var blog in Model.Datas)
                                 {
-                                    @foreach (var blog1 in blog.Blogs.Take(4))
+                                    @foreach (var blog1 in blog.Blogs.OrderByDescending(m => m.Id).Take(4))
                                     {
                                         <li class="recent-posts">
                                             <div class="recent-posts-image">
@@ -126,7 +126,7 @@
                     <div class="row">
                         @foreach (var bigBlog in Model.Datas)
                         {
-                            @foreach (var bigBlog1 in bigBlog.Blogs.Take(4))
+                            @foreach (var bigBlog1 in bigBlog.Blogs.OrderByDescending(m=> m.Id).Take(4))
                             {
                                 <div class="col-md-6">
                                     <!-- blog single item start -->
@@ -156,7 +156,7 @@
                         }
                         @foreach (var blogvideo in Model.Datas)
                         {
-                            @foreach (var blogvideo1 in blogvideo.Videos.TakeLast(2))
+                            @foreach (var blogvideo1 in blogvideo.Videos.OrderByDescending(m => m.Id))
                             {
                                 <div class="col-md-6">
                                     <!-- blog single item start -->

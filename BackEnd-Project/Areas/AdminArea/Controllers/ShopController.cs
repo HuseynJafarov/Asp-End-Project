@@ -4,6 +4,7 @@ using BackEnd_Project.Models;
 using BackEnd_Project.ViewModels;
 using BackEnd_Project.ViewModels.ProductViewModel;
 using BackEnd_Project.ViewModels.ProductViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -168,7 +169,7 @@ namespace BackEnd_Project.Areas.AdminArea.Controllers
                 Price = dbProduct.Price.ToString("0.#####").Replace(",", "."),
                 Discount = dbProduct.Discount.ToString("0.#####").Replace(",", "."),
                 CategoryId = dbProduct.CategoryId,
-                Images = dbProduct.ProductImages
+                Images = dbProduct.ProductImages.Where(m => m.IsMain).ToList(),
             });
         }
 

@@ -11,6 +11,5 @@ namespace BackEnd_Project.Models
     {
         public string Desc { get; set; }
         public string Image { get; set; }
-        public List<BlogVideo> Video { get; set; }
     }
 }
