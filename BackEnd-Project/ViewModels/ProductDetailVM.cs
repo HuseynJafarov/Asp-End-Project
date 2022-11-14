@@ -9,6 +9,7 @@ namespace BackEnd_Project.ViewModels
 {
     public class ProductDetailVM
     {
+        public int Id { get; set; }
         public Product Products { get; set; }
         public IEnumerable<Product> ShopProducts { get; set; }
         public IEnumerable<Customer> Customers { get; set; }

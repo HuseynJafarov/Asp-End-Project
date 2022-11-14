@@ -282,6 +282,38 @@ namespace BackEnd_Project.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("BackEnd_Project.Models.Comment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("AddingTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CommentDetail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ProductsId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductsId");
+
+                    b.ToTable("Comments");
+                });
+
             modelBuilder.Entity("BackEnd_Project.Models.ContactUs.Info", b =>
                 {
                     b.Property<int>("Id")
@@ -742,6 +774,15 @@ namespace BackEnd_Project.Migrations
                     b.HasOne("BackEnd_Project.Models.BlogPage.Customer", "Customer")
                         .WithMany("Socials")
                         .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("BackEnd_Project.Models.Comment", b =>
+                {
+                    b.HasOne("BackEnd_Project.Models.Product", "Products")
+                        .WithMany()
+                        .HasForeignKey("ProductsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

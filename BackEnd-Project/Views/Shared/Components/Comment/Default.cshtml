@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Comment>
+
+@foreach (var item in Model)
+{
+    <div class="total-reviews">
+        <div class="rev-avatar">
+            <img src="`/assets/img/about/avatar.jpg" alt="">
+        </div>
+        <div class="review-box">
+            <div class="ratings">
+                <span class="good"><i class="fa fa-star"></i></span>
+                <span class="good"><i class="fa fa-star"></i></span>
+                <span class="good"><i class="fa fa-star"></i></span>
+                <span class="good"><i class="fa fa-star"></i></span>
+                <span><i class="fa fa-star"></i></span>
+            </div>
+            <div class="post-author">
+                <p><span>@item.UserName -</span>@item.AddingTime</p>
+            </div>
+            <p>@item.CommentDetail</p>
+        </div>
+    </div>
+}

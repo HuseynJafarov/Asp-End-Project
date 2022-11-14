@@ -126,19 +126,19 @@
                                             <li><span>By: </span>Huseyn Jafarov,</li>
                                             <li><span>On: </span>@Model.Date.ToString("dd.MM.yyyy")</li>
                                         </ul>
-                                       
+
+                                        <p>
+                                            @Model.Description1
+                                        </p>
+                                        <blockquote>
                                             <p>
-                                                @Model.Description1
+                                                @Model.Description2
                                             </p>
-                                            <blockquote>
-                                                <p>
-                                                    @Model.Description2
-                                                </p>
-                                            </blockquote>
-                                            <p>
-                                                @Model.Description3
-                                            </p>
-                                        
+                                        </blockquote>
+                                        <p>
+                                            @Model.Description3
+                                        </p>
+
 
                                     </div>
                                 }
@@ -151,7 +151,7 @@
                                 <ul>
                                     <li>
                                         <div class="author-avatar">
-                                            <img src="~/assets/img/blog/comment-icon.png" alt="">
+                                            <img src="assets/img/blog/comment-icon.png" alt="">
                                         </div>
                                         <div class="comment-body">
                                             <span class="reply-btn"><a href="#">Reply</a></span>
@@ -167,7 +167,7 @@
                                     </li>
                                     <li class="comment-children">
                                         <div class="author-avatar">
-                                            <img src="~/assets/img/blog/comment-icon.png" alt="">
+                                            <img src="assets/img/blog/comment-icon.png" alt="">
                                         </div>
                                         <div class="comment-body">
                                             <span class="reply-btn"><a href="#">Reply</a></span>
@@ -183,7 +183,7 @@
                                     </li>
                                     <li>
                                         <div class="author-avatar">
-                                            <img src="~/assets/img/blog/comment-icon.png" alt="">
+                                            <img src="assets/img/blog/comment-icon.png" alt="">
                                         </div>
                                         <div class="comment-body">
                                             <span class="reply-btn"><a href="#">Reply</a></span>
@@ -200,6 +200,39 @@
                                 </ul>
                             </div>
                             <!-- comment area end -->
+                            <!-- start blog comment box -->
+                            <div class="blog-comment-wrapper">
+                                <h5>Leave A Reply</h5>
+                                <p>Email address will not be published. Required fields are marked *</p>
+                                <form action="#">
+                                    <div class="comment-post-box">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <label>Comment</label>
+                                                <textarea name="commnet" placeholder="Write a comment"></textarea>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4">
+                                                <label>Name</label>
+                                                <input type="text" class="coment-field" placeholder="Name">
+                                            </div>
+                                            <div class="col-lg-4 col-md-4">
+                                                <label>Email</label>
+                                                <input type="text" class="coment-field" placeholder="Email">
+                                            </div>
+                                            <div class="col-lg-4 col-md-4">
+                                                <label>Website</label>
+                                                <input type="text" class="coment-field" placeholder="Website">
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="coment-btn">
+                                                    <input class="btn" type="submit" name="submit" value="POST COMMENT">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- start blog comment box -->
                             <!-- start blog comment box -->
                             <div class="blog-comment-wrapper">
                                 <h5>Leave A Reply</h5>

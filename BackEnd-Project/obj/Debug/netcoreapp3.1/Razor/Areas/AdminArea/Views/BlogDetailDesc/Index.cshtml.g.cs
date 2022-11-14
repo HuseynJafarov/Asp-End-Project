@@ -35,41 +35,48 @@ using BackEnd_Project.Models.BlogDetail;
 #nullable disable
 #nullable restore
 #line 4 "C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\Areas\AdminArea\Views\_ViewImports.cshtml"
-using BackEnd_Project.ViewModels;
+using BackEnd_Project.Models.ContactUs;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 5 "C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\Areas\AdminArea\Views\_ViewImports.cshtml"
-using BackEnd_Project.ViewModels.ProductViewModel;
+using BackEnd_Project.ViewModels;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 6 "C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\Areas\AdminArea\Views\_ViewImports.cshtml"
-using BackEnd_Project.ViewModels.BlogViewModel;
+using BackEnd_Project.ViewModels.ProductViewModel;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 7 "C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\Areas\AdminArea\Views\_ViewImports.cshtml"
-using BackEnd_Project.ViewModels.ProductViewModels;
+using BackEnd_Project.ViewModels.BlogViewModel;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 8 "C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\Areas\AdminArea\Views\_ViewImports.cshtml"
+using BackEnd_Project.ViewModels.ProductViewModels;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 9 "C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\Areas\AdminArea\Views\_ViewImports.cshtml"
 using BackEnd_Project.Helpers;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"89e75cec49c7a364b129909c4da02eb85204d01f", @"/Areas/AdminArea/Views/BlogDetailDesc/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fe7bf8212609ef0972dd7ddbc2d89f5809726704", @"/Areas/AdminArea/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c7596cf8ce6ee9e4e3bae0769c41be831533ecb7", @"/Areas/AdminArea/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Areas_AdminArea_Views_BlogDetailDesc_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<BlogDetailDesc>>
     #nullable disable
@@ -121,7 +128,7 @@ using BackEnd_Project.Helpers;
 #line hidden
 #nullable disable
             WriteLiteral("<div class=\"container-fluid my-3 mx-3\">\r\n    <div class=\"table-responsive pt-3\">\r\n        <div class=\"create-btn mb-3\">\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "89e75cec49c7a364b129909c4da02eb85204d01f8857", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "89e75cec49c7a364b129909c4da02eb85204d01f9097", async() => {
                 WriteLiteral("<i class=\"fa-solid fa-plus\"></i>");
             }
             );
@@ -193,7 +200,7 @@ using BackEnd_Project.Helpers;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n                        </td>\r\n                        <td style=\"text-align: center;\">\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "89e75cec49c7a364b129909c4da02eb85204d01f12460", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "89e75cec49c7a364b129909c4da02eb85204d01f12700", async() => {
                 WriteLiteral("<i class=\"mdi mdi-information mx-0\"></i>");
             }
             );
@@ -225,7 +232,7 @@ using BackEnd_Project.Helpers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "89e75cec49c7a364b129909c4da02eb85204d01f14819", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "89e75cec49c7a364b129909c4da02eb85204d01f15059", async() => {
                 WriteLiteral("<i class=\"mdi mdi-table-edit\"></i>");
             }
             );
@@ -257,7 +264,7 @@ using BackEnd_Project.Helpers;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "89e75cec49c7a364b129909c4da02eb85204d01f17169", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "89e75cec49c7a364b129909c4da02eb85204d01f17409", async() => {
                 WriteLiteral("\r\n                                <button type=\"submit\" class=\"btn btn-danger\"><i class=\"mdi mdi-delete-forever\"></i></button>\r\n                            ");
             }
             );

@@ -95,6 +95,14 @@ namespace BackEnd_Project.Controllers
             }
         }
 
+        [HttpPost]
+        public async Task<IActionResult> PostComment(Comment comment)
+        {
+            await _context.Comments.AddAsync(comment);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index", new { id = comment.ProductsId });
+        }
+
         private async Task<Product> GetProductById(int? id)
         {
             return await _context.Products.FindAsync(id);

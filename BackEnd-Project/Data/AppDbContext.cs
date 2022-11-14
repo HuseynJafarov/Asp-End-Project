@@ -19,7 +19,7 @@ namespace BackEnd_Project.Data
         }
 
 
-    
+        public DbSet<Comment> Comments { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Social> Socials { get; set; }
         public DbSet<Customer> Customers { get; set; }
