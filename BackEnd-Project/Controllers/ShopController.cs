@@ -3,6 +3,7 @@ using BackEnd_Project.Helpers;
 using BackEnd_Project.Models;
 using BackEnd_Project.Services;
 using BackEnd_Project.ViewModels;
+using BackEnd_Project.ViewModels.AccountViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
@@ -100,8 +101,10 @@ namespace BackEnd_Project.Controllers
         {
             await _context.Comments.AddAsync(comment);
             await _context.SaveChangesAsync();
-            return RedirectToAction("Index", new { id = comment.ProductsId });
+            return RedirectToAction("Index", new { id = comment.Id });
         }
+
+        
 
         private async Task<Product> GetProductById(int? id)
         {

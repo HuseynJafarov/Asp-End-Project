@@ -1,7 +1,7 @@
-﻿@model int
+﻿@model Comment
 <form asp-controller="Shop" asp-action="PostComment" method="post" class="review-form">
     <h5>1 review for <span>Chaz Kangeroo Hoodies</span></h5>
-    @await Component.InvokeAsync("Comment");
+    @await Component.InvokeAsync("Comment")
     <div class="form-group row">
         <div class="col">
             <label name="UserName" class="col-form-label"><span class="text-danger">*</span> Your Name</label>
@@ -23,7 +23,7 @@
     </div>
 
 
-    <input name="ProductsId" value="@Model" hidden class="form-control">
+    <input name="ProductsId" value="@Model.Products.Id" hidden class="form-control">
     <input name="AddingTime" value="@DateTime.Now" hidden class="form-control">
 
     <div class="form-group row">

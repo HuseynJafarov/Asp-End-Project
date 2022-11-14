@@ -397,3 +397,5 @@ C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj
 C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Areas\AdminArea\Views\Contact\Index.cshtml.g.cs
 C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Comment\Default.cshtml.g.cs
 C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Partials\_ProductComments.cshtml.g.cs
+C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Views\Account\ForgotPassword.cshtml.g.cs
+C:\Users\HP\Desktop\CodeAcademy\ASP.NET Core\Backend-Project\BackEnd-Project\obj\Debug\netcoreapp3.1\Razor\Views\Account\ResetPassword.cshtml.g.cs
