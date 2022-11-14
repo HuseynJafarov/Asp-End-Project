@@ -16,7 +16,6 @@ namespace BackEnd_Project.Models
         public string Description { get; set; }
         public string Image { get; set; }
         [NotMapped]
-        [Required(ErrorMessage = "Can't be empty")]
         public IFormFile Photo { get; set; }
     }
 }

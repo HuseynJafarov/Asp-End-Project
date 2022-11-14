@@ -1,0 +1,48 @@
+﻿@model BlogDetailDesc
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+<div class="container my-5">
+    <div class="card">
+        <div class="card-header">
+            BlogDetailDesc Detail
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        Description-1
+                    </th>
+                    <th>
+                        Description-2
+                    </th>
+                    <th>
+                        Description-3
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        @Model.Desc1
+                    </td>
+                    <td>
+                        @Model.Desc2
+                    </td>
+                    <td>
+                        @Model.Desc3
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+

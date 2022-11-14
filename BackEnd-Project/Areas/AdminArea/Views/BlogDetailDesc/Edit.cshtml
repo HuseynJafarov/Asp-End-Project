@@ -1,0 +1,44 @@
+﻿@model BlogDetailDesc
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <span class="text-danger"></span>
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-description">
+                            BlogDetailDesc Detail
+                        </p>
+                        <form asp-controller="BlogDetailDesc" asp-action="Edit" enctype="multipart/form-data" class="forms-sample" method="post">
+                            <div class="form-group">
+                                <label asp-for="Desc1">Description-1</label>
+                                <input class="form-control" asp-for="Desc1">
+                                <span asp-validation-for="Desc1" class="text-danger my-1"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Desc2">Description-2</label>
+                                <input class="form-control" asp-for="Desc2">
+                                <span asp-validation-for="Desc2" class="text-danger my-1"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Desc3">Description-3</label>
+                                <input class="form-control" asp-for="Desc3">
+                                <span asp-validation-for="Desc3" class="text-danger my-1"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                            <a asp-controller="BlogDetailDesc" asp-action="Index" class="btn btn-light">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

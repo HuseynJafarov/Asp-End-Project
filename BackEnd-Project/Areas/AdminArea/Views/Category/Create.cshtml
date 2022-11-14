@@ -1,0 +1,46 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <span class="text-danger">@ViewBag.Message</span>
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-description">
+                            Category
+                        </p>
+                        <form asp-controller="Category" asp-action="Create" class="forms-sample" method="post">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                @*<input maxlength="" minlength="" type="text" class="form-control" asp-for="Name">*@
+                                <textarea class="form-control" asp-for="Name" id="category-name" rows="8"></textarea>
+                                <span class="text-danger my-1" asp-validation-for="Name"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                            <a asp-controller="Category" asp-action="Index" class="btn btn-light">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <partial name="_ValidationPartial" />
+    <script src="~/ckeditor/ckeditor.js"></script>
+
+    <script>
+        CKEDITOR.replace("category-name");
+    </script>
+
+
+}
+
+

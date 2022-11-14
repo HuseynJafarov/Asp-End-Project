@@ -169,7 +169,7 @@ namespace BackEnd_Project.Areas.AdminArea.Controllers
                 Price = dbProduct.Price.ToString("0.#####").Replace(",", "."),
                 Discount = dbProduct.Discount.ToString("0.#####").Replace(",", "."),
                 CategoryId = dbProduct.CategoryId,
-                Images = dbProduct.ProductImages.Where(m => m.IsMain).ToList(),
+                Images = dbProduct.ProductImages,
             });
         }
 

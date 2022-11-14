@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Category>
+
+@{
+    ViewData["Title"] = "Category";
+}
+
+
+<div class="container-fluid my-3 mx-3">
+    <div class="table-responsive pt-3">
+        <div class="create-btn mb-3">
+            <a asp-controller="Category" asp-action="Create" class="btn btn-success"><i class="fa-solid fa-plus"></i></a>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th style="text-align: center;">
+                        Settings
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Category category in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.Raw(category.Name)
+                        </td>
+                        <td style="text-align: center;">
+                            <a asp-action="Detail" asp-route-id="@category.Id" class="btn btn-info"><i class="mdi mdi-information mx-0"></i></a>
+                            <a asp-action="Edit" asp-route-id="@category.Id" class="btn btn-primary"><i class="mdi mdi-table-edit"></i></a>
+                            <form style="display: inline-block;" asp-action="Delete" asp-route-id="@category.Id" method="post">
+                                <button type="submit" class="btn btn-danger"><i class="mdi mdi-delete-forever"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

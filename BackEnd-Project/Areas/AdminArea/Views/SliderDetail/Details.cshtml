@@ -1,0 +1,52 @@
+﻿@model SliderDetail
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container my-5">
+    <div class="card">
+        <div class="card-header">
+            SliderDetail Details
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        Subtitle
+                    </th>
+                    <th>
+                        Header
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Image
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        @Model.Subtitle
+                    </td>
+                    <td>
+                        @Model.Header
+                    </td>
+                    <td>
+                        @Model.Description
+                    </td>
+                    <td>
+                        <img src="~/assets/img/slider/@Model.Image" alt="slider" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+

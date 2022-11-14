@@ -1,0 +1,34 @@
+﻿@model Customer
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+<div class="container-fluid mx-5 my-3">
+    <h3>Customer</h3>
+    <div class="img-area">
+        <img src="~/assets/img/blog/@Model.Image" style="width:200px; height:200px;" alt="Alternate Text" />
+    </div>
+    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <div class="form-group">
+                <label asp-for="BlogAuthor">Subtitle</label>
+                <input class="form-control" asp-for="BlogAuthor">
+                <span asp-validation-for="BlogAuthor" class="text-danger my-1"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Position">Position</label>
+                <input class="form-control" asp-for="Position">
+                <span asp-validation-for="Position" class="text-danger my-1"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Photo">Photo</label>
+                <input class="form-control" asp-for="Photo">
+                <span asp-validation-for="Photo" class="text-danger my-1"></span>
+            </div>
+        </div>
+        <a class="btn btn-primary" asp-controller="Customer" asp-action="Index">Back</a>
+        <button type="submit" class="btn btn-primary">Edit</button>
+    </form>
+</div>

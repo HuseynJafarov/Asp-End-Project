@@ -13,6 +13,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Areas\AdminArea\Views\Category\Create.cshtml" />
+    <None Include="Areas\AdminArea\Views\Category\Detail.cshtml" />
+    <None Include="Areas\AdminArea\Views\Category\Edit.cshtml" />
+    <None Include="Areas\AdminArea\Views\Category\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MailKit" Version="3.4.2" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.30" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.30" />

@@ -1,0 +1,45 @@
+﻿@model Customer
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/AdminArea/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container my-5">
+    <div class="card">
+        <div class="card-header">
+            Customer Details
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        Image
+                    </th>
+                    <th>
+                        BlogAuthor
+                    </th>
+                    <th>
+                        Position
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="~/assets/img/blog/@Model.Image" alt="slider" />
+                    </td>
+                    <td>
+                        @Model.BlogAuthor
+                    </td>
+                    <td>
+                        @Model.Position
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+

@@ -175,18 +175,13 @@
                             <span class="menu-title">Dashboard</span>
                         </a>
                     </li>
+                    
+
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                        <a class="nav-link" asp-area="AdminArea" asp-controller="SliderDetail" asp-action="Index">
                             <i class="mdi mdi-circle-outline menu-icon"></i>
-                            <span class="menu-title">Slider area</span>
-                            <i class="menu-arrow"></i>
+                            <span class="menu-title">SliderDetail</span>
                         </a>
-                        <div class="collapse" id="ui-basic">
-                            <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" asp-area="AdminArea" asp-controller="Slider" asp-action="Index">Slider</a></li>
-                                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Slider text</a></li>
-                            </ul>
-                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-area="AdminArea" asp-controller="Category" asp-action="Index">
@@ -210,6 +205,12 @@
                             <ul class="nav flex-column sub-menu">
                                 <li class="nav-item"> <a class="nav-link" asp-area="AdminArea" asp-controller="Blog" asp-action="Index">Blog</a></li>
                                 <li class="nav-item"> <a class="nav-link" asp-area="AdminArea" asp-controller="BlogDetail" asp-action="Index">Blog Details</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="AdminArea" asp-controller="BlogDetailDesc" asp-action="Index">Blog DetailsDesc</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="AdminArea" asp-controller="BlogVideo" asp-action="Index">Blog Video</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="AdminArea" asp-controller="Tag" asp-action="Index">Tag</a></li>
+                                <li class="nav-item"> <a class="nav-link" asp-area="AdminArea" asp-controller="Customer" asp-action="Index">Customer</a></li>
+
+
                             </ul>
                         </div>
                     </li>
